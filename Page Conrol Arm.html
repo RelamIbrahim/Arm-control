@@ -1,0 +1,344 @@
+
+<html>
+
+<head>
+
+				<Style type="text/css">
+                body {background-color: #ccccff;}
+				p.right {text-align: right}
+				p.center {text-align: center}
+               button{
+					font-size: 20px; text-align: left; background-color: #e6e6e6; height: 30px;
+				  width: 80px; text-align: center
+				}
+				
+
+				*{
+				  margin:0;
+				  padding:0;
+				  font-family: 'Arial', sans-serif;
+				}
+
+				.range{
+				  height: 70px;
+				  width: 400px;
+				  background:#fff;
+				  border-radius: 10px;
+				  padding: 0 65px 0 45px;
+
+				}
+
+
+				.range .sliderValue{
+				  position:relative;
+				  width:100%;
+				}
+
+
+				.range .sliderValue span{
+				  position: absolute;
+				  height:45px;
+				  width:380px;
+				  color: white;
+				  font-weight: 500;
+				  top: -40px;
+				  transform: translateX(-50%) scale(0);
+				  transform-origin: bottom;
+				  transition: transform 0.3s ease-in-out;
+				  line-height: 55px;
+				  z-index: 2;
+				}
+				.range .sliderValue span.show{
+				  transform: translateX(-50%) scale(1);
+				}
+				.range .sliderValue span:after{
+				  position: absolute;
+				  content: "";
+				  height:45px;
+				  width:45px;
+				  background: red;
+				  left:50%;
+				  transform: translateX(-50%) rotate(45deg);
+				  border:solid 3px #fff;
+				  z-index: -1;
+				  border-top-left-radius: 50%;
+				  border-top-right-radius: 50%;
+				  border-bottom-left-radius: 50%;
+				}
+
+
+				.range .field{
+				  position:relative;
+				  display:flex;
+				  align-items: center;
+				  justify-content: center;
+				  height: 100%;
+				}
+				.range .field .value.left{
+				  left: -22px;
+				}
+				.range .field .value.right{
+				  right: -43px;
+				}
+
+				.range .sliderValue span:after{
+				position: absolute;
+				content: "";
+				height: 60px;
+				width: 60px;
+				 background: black;
+				 left: 50%;
+				 transform: translateX(-50%) rotate(45deg);
+				  border:30px solid #fff;
+				  z-index: -1;
+				  }
+
+
+				.range .field input{
+				  -webkit-appearance: none;
+				  height:3px;
+				  background:#ddd;
+				  border-radius: 5px;
+				  outline:none;
+				  border:none;
+				  width:100%;
+				}
+
+                <!- -------------------------------- -->
+				<!– circular pointer -->
+
+				.range .field input::-webkit-slider-thumb{
+				  -webkit-appearance: none;
+				  height: 15px;
+				  width: 15px;
+				  background: black;
+				  border-radius: 50%;
+				  border: 1px solid #664AFF;
+				  cursor: pointer;
+				  }
+				</Style>
+       </head>
+
+
+             <!- ---------------------------------------------------------------------------  -->
+
+
+
+         <body>
+			<form action = "TestTable.php" method = "post">
+			<br>
+			</br>
+             <p>
+             </p>
+             <h4> <p class="center"><label> Motor1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label> </h4>
+						<div class="range">
+					  <div class="sliderValue">
+						<span>100</span>
+					  </div>
+					  <div class="field">
+							<div class="value left">0</div>
+						<input type="range" name="Motor1" min="0" max="180" value="0" steps="1" id="Motor1">
+						<div class="value right">180</div>
+
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+						<p>Value: <span id="demo10"></span></p>
+
+
+					  </div>
+
+					  <script type="text/javascript">
+						<!--
+
+						var slider10 = document.getElementById("Motor1");
+						var output10 = document.getElementById("demo10");
+						output10.innerHTML = slider10.value;
+
+						slider10.oninput = function() {
+						  output10.innerHTML = this.value;
+						}
+							//-->
+                 </script>
+                 </p>
+
+
+
+
+			 <h4> <p class="right"><label> Motor2 </label> </h4>
+			             	<div class="range">
+						  <div class="sliderValue">
+							<span>100</span>
+						  </div>
+						  <div class="field">
+							<div class="value left">0</div>
+						<input type="range" name="Motor2" min="0" max="180" value="0" steps="1" id="Motor2">
+						<div class="value right">180</div>
+
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+						<p>Value: <span id="demo20"></span></p>
+
+
+					  </div>
+
+					  <script type="text/javascript">
+						<!--
+
+					var slider20 = document.getElementById("Motor2");
+					var output20 = document.getElementById("demo20");
+					output20.innerHTML = slider20.value;
+
+					slider20.oninput = function() {
+					  output20.innerHTML = this.value;
+					}
+						//-->
+						 </script>
+					 </p>
+
+
+
+
+			 <h4> <p class="right"><label> Motor3 </label> </h4>
+					<div class="range">
+						  <div class="sliderValue">
+							<span>100</span>
+						  </div>
+						  <div class="field">
+							<div class="value left">0</div>
+						<input type="range" name="Motor3" min="0" max="180" value="0" steps="1" id="Motor3">
+						<div class="value right">180</div>
+
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+						<p>Value: <span id="demo30"></span></p>
+
+
+					  </div>
+
+					  <script type="text/javascript">
+						<!--
+
+					var slider30 = document.getElementById("Motor3");
+					var output30 = document.getElementById("demo30");
+					output30.innerHTML = slider30.value;
+
+					slider30.oninput = function() {
+					  output30.innerHTML = this.value;
+					}
+					//-->
+				 </script>
+			 </p>
+
+
+
+
+
+			 <h4> <p class="right"><label> Motor4 </label> </h4>
+			             	<div class="range">
+					  <div class="sliderValue">
+						<span>100</span>
+					  </div>
+					  <div class="field">
+						<div class="value left">0</div>
+						<input type="range" name="Motor4" min="0" max="180" value="0" steps="1" id="Motor4">
+						<div class="value right">180</div>
+
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+					<p>Value: <span id="demo40"></span></p>
+					  </div>
+
+					  <script type="text/javascript">
+						<!--
+					   var slider40 = document.getElementById("Motor4");
+						var output40 = document.getElementById("demo40");
+						output40.innerHTML = slider40.value;
+
+						slider40.oninput = function() {
+						  output40.innerHTML = this.value;
+		               }
+
+			 					   //-->
+			                  </script>
+			 </p>
+
+
+
+
+
+			 <h4> <p class="right"><label> Motor5 </label> </h4>
+				<div class="range">
+					  <div class="sliderValue">
+						<span>100</span>
+					  </div>
+					  <div class="field">
+						<div class="value left">0</div>
+					<input type="range" name="Motor5" min="0" max="180" value="0" steps="1" id="Motor5">
+						<div class="value right">180</div>
+
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+					<p>Value: <span id="demo50"></span></p>
+					  </div>
+
+					  <script type="text/javascript">
+						<!--
+					   var slider50 = document.getElementById("Motor5");
+						var output50 = document.getElementById("demo50");
+						output50.innerHTML = slider50.value;
+
+						slider50.oninput = function() {
+						output50.innerHTML = this.value;
+					}
+
+					   //-->
+				  </script>
+			 </p>
+
+
+
+
+			 <h4> <p class="right"><label> Motor6 </label> </h4>
+			             	<div class="range">
+					  <div class="sliderValue">
+						<span>100</span>
+					  </div>
+					  <div class="field">
+						<div class="value left">0</div>
+					 <input type="range" name="Motor6" min="0" max="180" value="0" steps="1" id="Motor6">
+							<div class="value right">180</div>
+
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+						<p>Value: <span id="demo60"></span></p>
+						  </div>
+
+						  <script type="text/javascript">
+							<!--
+						   var slider60 = document.getElementById("Motor6");
+							var output60 = document.getElementById("demo60");
+							output60.innerHTML = slider60.value;
+
+							slider60.oninput = function() {
+							output60.innerHTML = this.value;
+				}
+
+					   //-->
+					  </script>
+						</p>
+
+			<br> </br>
+			 <button type="Submit" value="Submit">Submit</button> &nbsp;&nbsp;&nbsp;&nbsp;
+			
+			 </form>
+			</body>
+
+</html>
